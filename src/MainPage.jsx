@@ -6,7 +6,7 @@ import "./MainPage.css";
 const CUISINES = ['Japan', 'Italy', 'Mexico', 'China', 'India'];
 
 export default function MainPage() {
-    const [cuisine, setCuisine] = useState(CUISINES[1]);
+    const [cuisine, setCuisine] = useState(CUISINES[0]);
     
     const [meals, setMeals] = useState([]);
     
@@ -74,8 +74,10 @@ export default function MainPage() {
                     {meals?.map((meal) => (
                         <section key={meal.idMeal} className="card-wrapp">
                             <section className="dish-card">
-                                <img src={meal.strMealThumb} alt={meal.strMeal} />
-                                <h3 className="dish-title">{meal.strMeal}</h3>
+                                <Link to={`/recipe/${meal.idMeal}`} className="card-link">
+                                    <img src={meal.strMealThumb} alt={meal.strMeal} />
+                                    <h3 className="dish-title">{meal.strMeal}</h3>
+                                </Link>
                             </section>
                         </section>
                     ))}

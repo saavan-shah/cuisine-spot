@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage.jsx";
+import FullRecipe from "./FullRecipe.jsx";
 import './App.css'
 
 function App() {
