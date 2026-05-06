@@ -16,8 +16,12 @@ function FullRecipe() {
     if (!recipe) {
         return <h2>Loading...</h2>;
     }
+
+    const ingredients = sortIngredients(recipe);
+
     return (
         <div className="full-recipe">
+            <Link to="/" className="back-link">← Back to Cuisines</Link>
             <div className="layout">
 
                 <div className="img-cont">
@@ -26,8 +30,16 @@ function FullRecipe() {
 
                 <div className="info-cont">
                     <h1>{recipe.strMeal}</h1>
-                    <p><strong>Category:</strong> {recipe.strCategory}</p>
+                    <p><strong>Main Protein:</strong> {recipe.strCategory}</p>
                     <p><strong>Area:</strong> {recipe.strArea}</p>
+                    <ul>
+                        {ingredients.map(ing => (
+                            <li key={ing.id}>
+                                <strong>{ing.name}</strong>
+                                <span className="measure">{ing.amount}</span>
+                            </li>
+                        ))}
+                    </ul>
                     <h2>Instructions</h2>
                     <p>{recipe.strInstructions}</p>
                 </div>
@@ -35,5 +47,20 @@ function FullRecipe() {
         </div>
     )
 } 
+function sortIngredients(recipe) {
+    const ingredients = [];
+    for (let i = 1; i <= 20; i++) {
+        const ingredient = recipe[`strIngredient${i}`];
+        const measure = recipe[`strMeasure${i}`];
+        if (ingredient && ingredient.trim() !== '') {
+            ingredients.push({
+                id: i,
+                name: ingredient,
+                amount: measure || '---'
+            });
+        }
+    }
+    return ingredients;
+}
 
 export default FullRecipe
