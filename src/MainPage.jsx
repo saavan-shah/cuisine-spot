@@ -19,7 +19,9 @@ export default function MainPage() {
     return (
         <section className="bigwrap">
             <nav>
-                <section className="nav-brand">The Cuisine Spot</section>
+                <section className="nav-brand">
+                    <a href="#headpage">The Cuisine Spot</a>
+                </section>
                 <section className="nav-links">
                     <a href="#about">About</a>
                     <a href="#main-chooser">Get Started</a>
@@ -27,7 +29,7 @@ export default function MainPage() {
                 </section>
             </nav>
 
-            <header>
+            <header id="headpage">
                 <h1>A World of Flavors at Your Fingertips</h1>
                 <p>Take an international look through the cuisines of the world, and find easy-to-make recipes in a few clicks!</p>
                 <a href="#main-chooser">Get Started</a>

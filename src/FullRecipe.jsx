@@ -7,6 +7,8 @@ function FullRecipe() {
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
 
+    const [completed, setCompleted] = useState(new Set());
+
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then(res => res.json())
@@ -18,6 +20,19 @@ function FullRecipe() {
     }
 
     const ingredients = sortIngredients(recipe);
+
+    const instructions = recipe.strInstructions.split('.').filter(step => step.trim().length > 5);
+
+
+    const toggleStep = (index) => {
+        const newCompleted = new Set(completed);
+        if (newCompleted.has(index)) {
+            newCompleted.delete(index);
+        } else {
+            newCompleted.add(index);
+        }
+        setCompleted(newCompleted);
+    }
 
     return (
         <div className="full-recipe">
@@ -41,7 +56,16 @@ function FullRecipe() {
                         ))}
                     </ul>
                     <h2>Instructions</h2>
-                    <p>{recipe.strInstructions}</p>
+                    <div className="tip">
+                        <p>Click on each step to mark it as completed!</p>
+                    </div>
+                    <div className="instructions">
+                        {instructions.map((step, index) => (
+                            <div key={index} className={`i-step ${completed.has(index) ? 'completed' : ''}`} onClick={() => toggleStep(index)}>
+                                {step.trim()}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,7 +80,7 @@ function sortIngredients(recipe) {
             ingredients.push({
                 id: i,
                 name: ingredient,
-                amount: measure || '---'
+                amount: measure || 'To taste'
             });
         }
     }
