@@ -1,6 +1,18 @@
 import "./MainPage.css";
 
+const CUISINES = ['Japanese', 'Italian', 'Mexican', 'Chinese', 'Indian'];
+
 export default function MainPage() {
+    const [cuisine, setCuisine] = useState(CUISINES[1]);
+    
+    const [meals, setMeals] = useState([]);
+    
+    useEffect(() => {
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${cuisine}`)
+            .then(res => res.json())
+            .then(data => setMeals(data.meals));
+    }, [cuisine]);
+    
     return (
         <section className="bigwrap">
             <nav>
@@ -35,11 +47,18 @@ export default function MainPage() {
                 </section>
 
                 <section className="button-board">
-                    <button className="country-button active" type="button">Italy</button>
+                    {/* <button className="country-button active" type="button">Italy</button>
                     <button className="country-button" type="button">Japan</button>
                     <button className="country-button" type="button">India</button>
                     <button className="country-button" type="button">Mexico</button>
-                    <button className="country-button" type="button">China</button>
+                    <button className="country-button" type="button">China</button> */}
+                    {CUISINES.map((c) => {
+                        if (c === cuisine) {
+                            return <button key={c} className="country-button active" type="button" onClick={() => setCuisine(c)}>{c}</button>;
+                        } else {
+                            return <button key={c} className="country-button" type="button" onClick={() => setCuisine(c)}>{c}</button>;
+                        }
+                    })}
                 </section>
 
                 <section className="all-cards">
