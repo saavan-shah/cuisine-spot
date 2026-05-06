@@ -31,7 +31,7 @@ function FullRecipe() {
                 <div className="info-cont">
                     <h1>{recipe.strMeal}</h1>
                     <p><strong>Main Protein:</strong> {recipe.strCategory}</p>
-                    <p><strong>Area:</strong> {recipe.strArea}</p>
+                    <p><strong>Cuisine:</strong> {recipe.strArea}</p>
                     <ul>
                         {ingredients.map(ing => (
                             <li key={ing.id}>

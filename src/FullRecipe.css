@@ -1,0 +1,60 @@
+h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.full-recipe {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #666;
+    &:hover {
+        color: #1a1a1a;
+    }
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.img-cont {
+    position: sticky;
+    top: 40px;
+    img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        height: 80vh;
+    }
+}
+
+.info-cont {
+    p {
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+        color: #666;
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        li {
+            margin-bottom: 10px;
+            font-size: 1.125rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
