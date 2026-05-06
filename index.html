@@ -5,6 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cuisine Spot</title>
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- <div id="root"></div>
@@ -13,15 +15,15 @@
       <section class="nav-brand">The Cuisine Spot</section>
       <section class="nav-links">
         <a href="#about">About</a>
-        <a href="#explorer">Get Started</a>
-        <a href="#journal">Follow</a>
+        <a href="#main-chooser">Get Started</a>
+        <a href="#footpage">Follow</a>
       </section>
     </nav>
 
     <header>
       <h1>You love cooking, we love countries.</h1>
       <p>Take an international look through the cuisines of the world, and find easy-to-make recipes in a few clicks!</p>
-      <a href="#explorer">Get Started</a>
+      <a href="#main-chooser">Get Started</a>
     </header>
 
     <section id="about">
@@ -41,7 +43,7 @@
       </section>
 
       <section class="button-board">
-        <button class="country-button" type="button">Italy</button>
+        <button class="country-button active" type="button">Italy</button>
         <button class="country-button" type="button">Japan</button>
         <button class="country-button" type="button">India</button>
         <button class="country-button" type="button">Mexico</button>
@@ -49,21 +51,25 @@
       </section>
 
       <section class="all-cards">
-        <section class="dish-card">
-          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800&auto=format&fit=crop" alt="Dish image" class="dish-image">
-          <h3 class="dish-title">Spaghetti Carbonara</h3>
+        <section class="card-wrapp">
+          <section class="dish-card">
+            <img src="https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dish image" class="dish-image">
+            <h3 class="dish-title">Spaghetti Carbonara</h3>
+          </section>
         </section>
 
-        <section class="dish-card">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" alt="Dish image" class="dish-image">
-          <h3 class="dish-title">Margherita Pizza</h3>
+        <section class="card-wrapp">
+          <section class="dish-card">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dish image" class="dish-image">
+            <h3 class="dish-title">Margherita Pizza</h3>
+          </section>
         </section>
 
       </section>
 
     </section>
 
-    <footer>
+    <footer id="footpage">
       <p>Created by Saavan Shah, CSE 2004, Spring 2026</p>
     </footer>
 
