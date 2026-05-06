@@ -28,15 +28,15 @@ export default function MainPage() {
             </nav>
 
             <header>
-                <h1>You love cooking, we love countries.</h1>
+                <h1>A World of Flavors at Your Fingertips</h1>
                 <p>Take an international look through the cuisines of the world, and find easy-to-make recipes in a few clicks!</p>
                 <a href="#main-chooser">Get Started</a>
             </header>
 
             <section id="about">
                 <section className="about-text">
-                    <h2>Cooking is more than just a recipe.</h2>
-                    <p>It is an anthropological study. When we examine a dish like traditional Japanese Sushi or a heavy Italian Ragu, we aren't just looking at ingredients; we are looking at hundreds of years of trade, agriculture, and human ingenuity.</p>
+                    <h2>More than just a recipe.</h2>
+                    <p>Home cooking can be an avenue for adventure. Experience an international assortment of world flavors right from your kitchen, with all your loved ones in on the journey! From the countryside of Italy to the metropolitan hubs of Japan, travel across the Earth with this online cookbook compendium. Ranging from five different cuisines, this compendium offers recipes of all types of dietary options, so everyone can enjoy. Please enjoy this cookbook and its recipes, and find your international flavor!</p>
                 </section>
                 <section className="about-image">
                     <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop" alt="Chef cooking" className="philosophy-image" />
