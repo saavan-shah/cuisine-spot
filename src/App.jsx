@@ -6,6 +6,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
+      <Route path="/recipe/:id" element={<FullRecipe />} />
     </Routes>
   );
 }
