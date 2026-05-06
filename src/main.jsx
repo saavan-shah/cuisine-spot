@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/cuisine-spot">
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/cuisine-spot'}>
       <App />
     </BrowserRouter>
   </StrictMode>,

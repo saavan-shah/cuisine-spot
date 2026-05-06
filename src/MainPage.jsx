@@ -1,6 +1,9 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./MainPage.css";
 
-const CUISINES = ['Japanese', 'Italian', 'Mexican', 'Chinese', 'Indian'];
+const CUISINES = ['Japan', 'Italy', 'Mexico', 'China', 'India'];
 
 export default function MainPage() {
     const [cuisine, setCuisine] = useState(CUISINES[1]);
@@ -68,10 +71,10 @@ export default function MainPage() {
                         <h3 className="dish-title">Margherita Pizza</h3>
                     </section>
                     </section> */}
-                    {meals.map((meal) => (
+                    {meals?.map((meal) => (
                         <section key={meal.idMeal} className="card-wrapp">
                             <section className="dish-card">
-                                <img src={meal.strMealThumb} alt="{meal.strMeal}" />
+                                <img src={meal.strMealThumb} alt={meal.strMeal} />
                                 <h3 className="dish-title">{meal.strMeal}</h3>
                             </section>
                         </section>
