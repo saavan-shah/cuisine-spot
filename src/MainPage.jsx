@@ -62,19 +62,20 @@ export default function MainPage() {
                 </section>
 
                 <section className="all-cards">
-                    <section className="card-wrapp">
-                    <section className="dish-card">
-                        <img src="https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dish image" />
-                        <h3 className="dish-title">Spaghetti Carbonara</h3>
-                    </section>
-                    </section>
-
-                    <section className="card-wrapp">
+                    {/* <section className="card-wrapp">
                     <section className="dish-card">
                         <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dish image" />
                         <h3 className="dish-title">Margherita Pizza</h3>
                     </section>
-                    </section>
+                    </section> */}
+                    {meals.map((meal) => (
+                        <section key={meal.idMeal} className="card-wrapp">
+                            <section className="dish-card">
+                                <img src={meal.strMealThumb} alt="{meal.strMeal}" />
+                                <h3 className="dish-title">{meal.strMeal}</h3>
+                            </section>
+                        </section>
+                    ))}
 
                 </section>
 
