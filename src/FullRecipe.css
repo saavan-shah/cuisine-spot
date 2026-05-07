@@ -78,10 +78,11 @@ h2 {
         border-color: #1a1a1a;
         transform: translateX(5px);
     }
-    .completed {
+    
+}
+.completed {
         opacity: 0.5;
         text-decoration: line-through;
         background: transparent;
         border-color: transparent;
     }
-}

@@ -21,7 +21,7 @@ function FullRecipe() {
 
     const ingredients = sortIngredients(recipe);
 
-    const instructions = recipe.strInstructions.split('.').filter(step => step.trim().length > 5);
+    const instructions = recipe.strInstructions?.split('.').filter(step => step.trim().length > 5);
 
 
     const toggleStep = (index) => {
