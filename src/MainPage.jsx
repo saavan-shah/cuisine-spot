@@ -40,9 +40,9 @@ export default function MainPage() {
                     <h2>More than just a recipe.</h2>
                     <p>Home cooking can be an avenue for adventure. Experience an international assortment of world flavors right from your kitchen, with all your loved ones in on the journey! From the countryside of Italy to the metropolitan hubs of Japan, travel across the Earth with this online cookbook compendium. Ranging from five different cuisines, this compendium offers recipes of all types of dietary options, so everyone can enjoy. Please enjoy this cookbook and its recipes, and find your international flavor!</p>
                 </section>
-                <section className="about-image">
+                <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.05 }} className="about-image">
                     <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop" alt="Chef cooking" className="philosophy-image" />
-                </section>
+                </motion.section>
             </section>
 
             <section id="main-chooser">
@@ -75,12 +75,12 @@ export default function MainPage() {
                     </section> */}
                     {meals?.map((meal) => (
                         <section key={meal.idMeal} className="card-wrapp">
-                            <section className="dish-card">
+                            <motion.section className="dish-card" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ scale: 1.05, y: -15}} whileTap={{ scale: 0.95}}>
                                 <Link to={`/recipe/${meal.idMeal}`} className="card-link">
                                     <img src={meal.strMealThumb} alt={meal.strMeal} />
                                     <h3 className="dish-title">{meal.strMeal}</h3>
                                 </Link>
-                            </section>
+                            </motion.section>
                         </section>
                     ))}
 

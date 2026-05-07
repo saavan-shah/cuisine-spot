@@ -40,11 +40,11 @@ function FullRecipe() {
             <div className="layout">
 
                 <div className="img-cont">
-                    <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+                    <motion.img initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} src={recipe.strMealThumb} alt={recipe.strMeal} />
                 </div>
 
                 <div className="info-cont">
-                    <h1>{recipe.strMeal}</h1>
+                    <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>{recipe.strMeal}</motion.h1>
                     <p><strong>Main Protein:</strong> {recipe.strCategory}</p>
                     <p><strong>Cuisine:</strong> {recipe.strArea}</p>
                     <ul>
