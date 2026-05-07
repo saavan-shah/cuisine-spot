@@ -104,7 +104,7 @@ header {
 }
 
 #main-chooser {
-    padding: 100px 0;
+    padding: 20px 0;
 }
 
 .chooser-head, .button-board {
@@ -198,8 +198,77 @@ header {
     padding: 40px 20px;
     background: #1a1a1a;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 60px;
+    text-align: left;
+    align-items: start;
     p {
         margin: 0;
         font-size: 0.9rem;
+    }
+    h3 {
+        color: white;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    a {
+        color: #b3b3b3;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.footer-links, .footer-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    p {
+        margin: 0;
+        color: #b3b3b3;
+        font-size: 0.9rem;
+    }
+
+    .back-to-top {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 24px;
+        border-radius: 40px;
+        border: 1px solid #333;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: white;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+        }
     }
 }

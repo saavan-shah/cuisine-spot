@@ -89,7 +89,30 @@ export default function MainPage() {
             </section>
 
             <footer id="footpage">
-                <p>Created by Saavan Shah, CSE 2004, Spring 2026</p>
+                <section className="footer-content">
+                    <div className="footer-info">
+                        <h3>The Cuisine Spot</h3>
+                        <p>Created by Saavan Shah</p>
+                        <p>CSE 2004, Spring 2026</p>
+                    </div>
+
+                    <div className="footer-links">
+                        <h3>Follow & Connect</h3>
+                        <a href="https://github.com/saavan-shah" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://linkedin.com/in/saavan-shah-1ba53935b" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </div>
+
+                    <div className="footer-credits">
+                        <h3>Credits</h3>
+                        <p>Recipes by <a href="https://www.themealdb.com/" target="_blank" rel="noreferrer">TheMealDB</a></p>
+                        <p>Images via Unsplash</p>
+                    </div>
+                </section>
+
+                <section className="footer-bottom">
+                    <p>&copy; {new Date().getFullYear()} Saavan Shah. All rights reserved.</p>
+                    <a href="#headpage" className="back-to-top">↑ Back to Top</a>
+                </section>
             </footer>
         </section>
     );
